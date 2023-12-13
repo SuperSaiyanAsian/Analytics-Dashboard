@@ -1,5 +1,5 @@
 import encode from '$lib/utils/encode.js';
-import { authenticate } from '$lib/server/authenticate.js';
+import { authenticate } from '$lib/server/api.js';
         
 export function load({ cookies }) {
 	const userToken = cookies.get('userAuthToken');
