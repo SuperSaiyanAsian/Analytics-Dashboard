@@ -1,4 +1,5 @@
-// export const handle = async ({ event, resolve }) => {
-// 	event.locals.auth = auth.handleRequest(event);
-// 	// ...
-// };
+export async function handle({ event, resolve }) {
+	const response = await resolve(event);
+
+	return response;
+}

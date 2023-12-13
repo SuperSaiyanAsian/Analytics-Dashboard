@@ -1,8 +1,15 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { enhance } from '$app/forms'
+	import { invalidateAll } from '$app/navigation';
 
 	export let data;
 	export let form;
+
+	// Reload page after logging out so user can log in again 
+	onMount(() => {
+		invalidateAll();
+	});
 </script>
 
 <div class="centered">
@@ -13,8 +20,9 @@
 	{/if}
 
 	{#if data.userToken}
-		<center>
-			<h1 id="loggedIn">You are logged in!</h1>
+		<center id="loggedIn">
+			<h1>You are logged in!</h1>
+			<a href="/logout" data-sveltekit-preload-data="tap">Log out?</a>
 		</center>
 	{:else}
 		<center>
@@ -61,7 +69,8 @@
 	}
 
 	#loggedIn {
-		display: flex;
+		/* display: flex; */
+		justify-self: center;
 	}
 
 	.loginField {

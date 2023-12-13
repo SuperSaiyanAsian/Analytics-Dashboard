@@ -7,7 +7,9 @@
 </script>
 
 <div class="centered">
-    <h1>Design Modules</h1>
+	<center>
+		<h1>Design Modules</h1>
+	</center>
 </div>
 
 <style>

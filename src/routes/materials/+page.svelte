@@ -7,7 +7,9 @@
 </script>
 
 <div class="centered">
-    <h1>Material</h1>
+	<center>
+		<h1>Material</h1>
+	</center>
 </div>
 
 <style>
