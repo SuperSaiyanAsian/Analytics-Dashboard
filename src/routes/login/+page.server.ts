@@ -24,7 +24,7 @@ export const actions= {
             const responseData = await response.json();
             const token = responseData.token;
     
-            cookies.set('userAuthToken', token, { path: '/' });
+            cookies.set('userAuthToken', `Bearer ${token}`, { path: '/' });
         }
 
         return { 
